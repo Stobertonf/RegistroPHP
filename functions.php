@@ -28,18 +28,18 @@ function display_account_registration_field() {
     $value = isset($_POST['billing_account_number']) ? esc_attr($_POST['billing_account_number']) : $user->billing_account_number;
     ?>
     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-    <label for="reg_billing_account_number"><?php _e( 'Nome', 'woocommerce' ); ?> <span class="required">*</span></label>
-    <input type="text"  class="input-text" name="billing_account_number" id="reg_billing_account_number" value="<?php echo $value ?>" />
+    <label for="reg_billing_account_name"><?php _e( 'Nome', 'woocommerce' ); ?> <span class="required">*</span></label>
+    <input type="text"  class="input-text" name="reg_billing_account_name" id="reg_billing_account_name" value="<?php echo $value ?>" />
     </p>
     
      <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-    <label for="reg_billing_account_number"><?php _e( 'Empresa', 'woocommerce' ); ?> <span class="required">*</span></label>
-    <input type="text"  class="input-text" name="billing_account_number" id="reg_billing_account_number" value="<?php echo $value ?>" />
+    <label for="reg_billing_account_company"><?php _e( 'Empresa', 'woocommerce' ); ?> <span class="required">*</span></label>
+    <input type="text"  class="input-text" name="billing_account_company" id="reg_billing_account_company" value="<?php echo $value ?>" />
     </p>
     
      <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-    <label for="reg_billing_account_number"><?php _e( 'E-mail', 'woocommerce' ); ?> <span class="required">*</span></label>
-    <input type="text"  class="input-text" name="billing_account_number" id="reg_billing_account_number" value="<?php echo $value ?>" />
+    <label for="reg_billing_account_email"><?php _e( 'E-mail', 'woocommerce' ); ?> <span class="required">*</span></label>
+    <input type="text"  class="input-text" name="billing_account_email" id="reg_billing_account_email" value="<?php echo $value ?>" />
     </p>
     
      <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
