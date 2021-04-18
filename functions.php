@@ -1,24 +1,4 @@
 <?php
-/**
- * Theme functions and definitions.
- *
- * Sets up the theme and provides some helper functions
- *
- * When using a child theme (see http://codex.wordpress.org/Theme_Development
- * and http://codex.wordpress.org/Child_Themes), you can override certain
- * functions (those wrapped in a function_exists() call) by defining them first
- * in your child theme's functions.php file. The child theme's functions.php
- * file is included before the parent theme's file, so the child theme
- * functions would be used.
- *
- *
- * For more information on hooks, actions, and filters,
- * see http://codex.wordpress.org/Plugin_API
- *
- * @package OceanWP WordPress theme
- */
-
-
 
 /*Início da Inserção*/
 add_action( 'woocommerce_register_form_start', 'display_account_registration_field' );
@@ -67,7 +47,7 @@ function save_account_registration_field( $customer_id ) {
     }
 }
 
-// Salve o valor do campo em Editar conta
+// Salvar o valor do campo em Editar conta
 add_action( 'woocommerce_save_account_details', 'save_my_account_billing_account_number', 10, 1 );
 function save_my_account_billing_account_number( $user_id ) {
     if( isset( $_POST['billing_account_number'] ) )
