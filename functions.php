@@ -266,14 +266,7 @@ final class OCEANWP_Theme_Class {
 
 	}
 
-	/**
-	 * Compare WordPress version
-	 *
-	 * @access public
-	 * @since 1.8.3
-	 * @param  string $version - A WordPress version to compare against current version.
-	 * @return boolean
-	 */
+	
 	public static function is_wp_version( $version = '5.4' ) {
 
 		global $wp_version;
