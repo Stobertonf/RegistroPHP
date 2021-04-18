@@ -54,7 +54,7 @@ function save_my_account_billing_account_number( $user_id ) {
         update_user_meta( $user_id, 'billing_account_number', sanitize_text_field( $_POST['billing_account_number'] ) );
 }
 
-// Exibir campo na seção de campos de faturamento do usuário administrador
+// Exibi os campos de faturamento do no usuer admin
 add_filter( 'woocommerce_customer_meta_fields', 'admin_user_custom_billing_field', 10, 1 );
 function admin_user_custom_billing_field( $args ) {
     $args['billing']['fields']['billing_account_number'] = array(
