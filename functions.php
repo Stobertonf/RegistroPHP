@@ -1,6 +1,6 @@
 <?php
 
-/*Início da Inserção*/
+/*Start*/
 add_action( 'woocommerce_register_form_start', 'display_account_registration_field' );
 add_action( 'woocommerce_edit_account_form_start', 'display_account_registration_field' );
 function display_account_registration_field() {
@@ -54,7 +54,7 @@ function save_my_account_billing_account_number( $user_id ) {
         update_user_meta( $user_id, 'billing_account_number', sanitize_text_field( $_POST['billing_account_number'] ) );
 }
 
-// Exibi os campos de faturamento do no usuer admin
+// Exibi os campos de faturamento no usuer admin
 add_filter( 'woocommerce_customer_meta_fields', 'admin_user_custom_billing_field', 10, 1 );
 function admin_user_custom_billing_field( $args ) {
     $args['billing']['fields']['billing_account_number'] = array(
