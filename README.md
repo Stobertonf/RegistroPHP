@@ -6,4 +6,4 @@ Solução: Foram desenvolvidas algumas functions para realizar o procedimento.
 
 Outra Solução: Poderia ter feito com algum plugin, no entanto, preferi fazer via PHP.
 
-Obs. Desenvolvido para fins de estudos.
+Obs. Desenvolvido para fins de estudo.
