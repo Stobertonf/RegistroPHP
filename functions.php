@@ -30,7 +30,7 @@ function display_account_registration_field() {
     <?php
 }
 
-// validação de campo de registro
+
 add_filter( 'woocommerce_registration_errors', 'account_registration_field_validation', 10, 3 );
 function account_registration_field_validation( $errors, $username, $email ) {
     if ( isset( $_POST['billing_account_number'] ) && empty( $_POST['billing_account_number'] ) ) {
@@ -39,7 +39,7 @@ function account_registration_field_validation( $errors, $username, $email ) {
     return $errors;
 }
 
-// Salvar valor do campo de registro
+
 add_action( 'woocommerce_created_customer', 'save_account_registration_field' );
 function save_account_registration_field( $customer_id ) {
     if ( isset( $_POST['billing_account_number'] ) ) {
@@ -47,14 +47,14 @@ function save_account_registration_field( $customer_id ) {
     }
 }
 
-// Salvar o valor do campo em Editar conta
+
 add_action( 'woocommerce_save_account_details', 'save_my_account_billing_account_number', 10, 1 );
 function save_my_account_billing_account_number( $user_id ) {
     if( isset( $_POST['billing_account_number'] ) )
         update_user_meta( $user_id, 'billing_account_number', sanitize_text_field( $_POST['billing_account_number'] ) );
 }
 
-// Exibi os campos de faturamento no usuer admin
+
 add_filter( 'woocommerce_customer_meta_fields', 'admin_user_custom_billing_field', 10, 1 );
 function admin_user_custom_billing_field( $args ) {
     $args['billing']['fields']['billing_account_number'] = array(
@@ -65,7 +65,7 @@ function admin_user_custom_billing_field( $args ) {
     return $args;
 }
 
-/*Fim da Inserção*/
+//
 
 
 
